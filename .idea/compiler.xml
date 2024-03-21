@@ -8,10 +8,13 @@
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.30/f195ee86e6c896ea47a1d39defbe20eb59cd149d/lombok-1.18.30.jar" />
         </processorPath>
-        <module name="rental.main" />
+        <module name="member.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="com.msa.book" target="17" />
+      <module name="com.msa.book.main" target="17" />
+      <module name="com.msa.book.test" target="17" />
       <module name="com.msa.rental" target="17" />
       <module name="com.msa.rental.main" target="17" />
       <module name="com.msa.rental.test" target="17" />
