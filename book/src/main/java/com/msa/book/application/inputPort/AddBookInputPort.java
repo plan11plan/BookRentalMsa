@@ -3,7 +3,7 @@ package com.msa.book.application.inputPort;
 import com.msa.book.application.outputPort.BookOutPutPort;
 import com.msa.book.application.usecase.AddBookUsecase;
 import com.msa.book.domain.model.Book;
-import com.msa.book.domain.model.vo.enumType.Classfication;
+import com.msa.book.domain.model.vo.enumType.Classification;
 import com.msa.book.domain.model.vo.enumType.Location;
 import com.msa.book.domain.model.vo.enumType.Source;
 import com.msa.book.framework.web.dto.input.BookInfoDTO;
@@ -28,7 +28,7 @@ public class AddBookInputPort implements AddBookUsecase {
                 bookInfoDTO.getDescription(),
                 bookInfoDTO.getPublicationDate(),
                 Source.valueOf(bookInfoDTO.getSource()),
-                Classfication.valueOf(bookInfoDTO.getClassification()),
+                Classification.valueOf(bookInfoDTO.getClassification()),
                 Location.valueOf(bookInfoDTO.getLocation())
         );
         bookOutPutPort.save(book);

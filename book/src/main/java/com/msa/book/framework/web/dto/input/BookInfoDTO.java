@@ -1,9 +1,10 @@
 package com.msa.book.framework.web.dto.input;
 
 import java.time.LocalDate;
+import lombok.Data;
 import lombok.Getter;
 
-@Getter
+@Data
 public class BookInfoDTO {
 
     private String title;

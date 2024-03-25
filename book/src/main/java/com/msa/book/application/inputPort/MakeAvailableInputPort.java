@@ -14,11 +14,11 @@ import org.springframework.transaction.annotation.Transactional;
 @RequiredArgsConstructor
 public class MakeAvailableInputPort implements MakeAvailableUsecase {
     private final BookOutPutPort bookOutPutPort;
-    private final InquiryUsecase inquiryUsecase;
+
     @Override
     public BookOutPutDTO available(Long bookNo) {
         Book loadBook = bookOutPutPort.loadBook(bookNo);
-       loadBook.makeUnavailabe();
+       loadBook.makeAvailable();
        return BookOutPutDTO.mapToDTO(loadBook);
     }
 }

@@ -2,7 +2,7 @@ package com.msa.book.domain.model;
 
 import com.msa.book.domain.model.vo.BookDesc;
 import com.msa.book.domain.model.vo.enumType.BookStatus;
-import com.msa.book.domain.model.vo.enumType.Classfication;
+import com.msa.book.domain.model.vo.enumType.Classification;
 import com.msa.book.domain.model.vo.enumType.Location;
 import com.msa.book.domain.model.vo.enumType.Source;
 import jakarta.persistence.Embedded;
@@ -27,7 +27,7 @@ public class Book {
     private String title;
     @Embedded
     private BookDesc desc;
-    private Classfication classfication;
+    private Classification classification;
     private BookStatus bookStatus;
     private LocalDate localDate;
     private Location location;
@@ -37,14 +37,14 @@ public class Book {
                                  String description,
                                  LocalDate publicationDate,
                                  Source source,
-                                 Classfication classfication,
+                                 Classification classification,
                                  Location location) {
         BookDesc bookDesc = BookDesc.createBookDesc(
                 author,isbn,description,publicationDate,source);
         Book book = new Book();
         book.setTitle(title);
         book.setDesc(bookDesc);
-        book.setClassfication(classfication);
+        book.setClassification(classification);
         book.setLocation(location);
         book.setBookStatus(BookStatus.ENTERED);
         return book;
@@ -52,7 +52,7 @@ public class Book {
     public static Book sample(){
         return enterBook("엔터프라이즈 아키텍처 패턴","마틴파울러","21321321","엔터프라이즈 패턴 에 관한 좋은 서적", LocalDate.now(),
                 Source.SUPPLY,
-                Classfication.COMPUTER,
+                Classification.COMPUTER,
                 Location.JEONGJA);
     }
     /**
@@ -64,7 +64,7 @@ public class Book {
         this.setBookStatus(BookStatus.AVAILABLE);
         return this;
     }
-    public Book makeUnavailabe()
+    public Book makeUnAvailable()
     {
         this.setBookStatus(BookStatus.AVAILABLE);
         return this;

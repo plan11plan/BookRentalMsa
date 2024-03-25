@@ -2,7 +2,7 @@ package com.msa.book;
 
 
 import com.msa.book.domain.model.Book;
-import com.msa.book.domain.model.vo.enumType.Classfication;
+import com.msa.book.domain.model.vo.enumType.Classification;
 import com.msa.book.domain.model.vo.enumType.Location;
 import com.msa.book.domain.model.vo.enumType.Source;
 import java.time.LocalDate;
@@ -27,7 +27,7 @@ public class BookApplication {
 				"주인공 노인과 바다",
 				LocalDate.now(),
 				Source.SUPPLY,
-				Classfication.LITERATURE,
+				Classification.LITERATURE,
 				Location.PANGYO);
 		System.out.println(book);
 		System.out.println("도서1 입고 --> 대여가능 처리");
@@ -36,7 +36,7 @@ public class BookApplication {
 		System.out.println("샘플도서 생성");
 		Book sample = Book.sample();
 		System.out.println(sample);
-		sample.makeUnavailabe();
+		sample.makeUnAvailable();
 		System.out.println(sample.getBookStatus());
 	}
 

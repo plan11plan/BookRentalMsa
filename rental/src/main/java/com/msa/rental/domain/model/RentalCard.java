@@ -77,9 +77,9 @@ public class RentalCard {
     public static RentalCard createRentalCard(IDName creator) {
         RentalCard rentalCard = new RentalCard();
         rentalCard.setRentalCardNo(RentalCardNo.createRentalCardNo());
-        rentalCard.setMember(IDName.sample());
+        rentalCard.setMember(creator);
         rentalCard.setRentStatus(RentStatus.RENT_AVAILABLE);
-        rentalCard.setLateFee(LateFee.sample());
+        rentalCard.setLateFee(LateFee.createLateFee());
         return rentalCard;
     }
 
