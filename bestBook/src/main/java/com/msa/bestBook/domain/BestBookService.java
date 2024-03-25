@@ -20,7 +20,7 @@ public class BestBookService {
     }
     public void dealBestBook(Item item){
         BestBook bestBook = bookRepository.findBestBookByItem(item);
-        if (bestBook != null){bestBook.increseBestBookCount();
+        if (bestBook != null){bestBook.increaseBestBookCount();
         } else {
             bestBook =  BestBook.registerBestBook(item);
         }
